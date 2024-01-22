@@ -38,3 +38,7 @@ h1 {
   color: #000000;
   text-decoration: none;
 }
+img {
+  width: 100px;
+  height: 150px;
+}
