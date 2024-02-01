@@ -3,7 +3,7 @@
   margin: 0;
 }
 body {
-  width: 1440px;
+  max-width: 1440px;
   height: 5574px;
   background: #ffffff;
 }
@@ -11,9 +11,12 @@ body {
 /* шапка с навигационной панелью */
 
 .nav-head {
-  width: 1397px;
+  max-width: 1397px;
   height: 135px;
   margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-head h1 {
   font-family: Playfair Display, serif;
@@ -24,10 +27,12 @@ body {
 .navbar-top {
   width: 1195px;
   height: 28px;
+  display: flex;
+  justify-content: right;
 }
 .navbar-top ul {
-  list-style: none;
   display: flex;
+  list-style: none;
 }
 .navbar-top li {
   padding-left: 55px;
@@ -43,18 +48,21 @@ body {
 
 /* Банер с логотипом компании */
 
-.Hero-section {
-  width: 1440px;
+.hero-section {
+  max-width: 1440px;
   height: 630px;
   background-image: url(img/BG.jpg);
-  box-sizing: border-box;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .studio {
   width: 690px;
   height: 360px;
   background-color: #ffffff;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .studio h2 {
   font-family: Playfair Display, serif;
@@ -62,6 +70,7 @@ body {
   font-size: 86px;
   line-height: 103px;
   text-align: center;
+  padding-bottom: 15px;
 }
 .studio p {
   font-family: Roboto, sans-serif;
@@ -73,36 +82,36 @@ body {
 
 /* биография Katya Milss */
 
-.Biography {
+.biography {
   width: 1165px;
   height: 840px;
   margin: 20px;
 }
-.Biography img {
+.biography img {
   width: 571px;
   height: 840px;
   float: left;
 }
-.Biography p {
+.biography p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
   text-align: right;
 }
-.Biography h2 {
+.biography h2 {
   font-family: Playfair Display, serif;
   font-weight: 500;
   font-size: 86px;
   line-height: 114.64px;
 }
-.Biography pre {
+.biography pre {
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 21.09px;
 }
-.Biography q {
+.biography q {
   font-family: Bitter, serif;
   font-weight: 400;
   font-size: 26px;
@@ -111,13 +120,13 @@ body {
 
 /* Дезайнеры */
 
-.Designers {
+.designers {
   width: 1440px;
   height: 677px;
   display: flex;
   margin: 20px;
 }
-.Designers p {
+.designers p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -135,13 +144,13 @@ body {
   width: 331px;
   height: 440px;
 }
-.Designers pre {
+.designers pre {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 18.75px;
 }
-.Designers span {
+.designers span {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -150,7 +159,7 @@ body {
 
 /* отзывы */
 
-.Testimonials {
+.testimonials {
   width: 1400px;
   height: 760px;
   margin: 20px;
@@ -159,13 +168,13 @@ body {
   width: 451px;
   height: 760px;
 }
-.Testimonials p {
+.testimonials p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 18.75px;
 }
-.Testimonials a {
+.testimonials a {
   font-style: normal;
   color: #000000;
   text-decoration: none;
@@ -174,7 +183,7 @@ body {
   font-size: 16px;
   line-height: 18.75px;
 }
-.Testimonials h3 {
+.testimonials h3 {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -191,24 +200,24 @@ body {
 
 /* достоинства */
 
-.Strong-points {
+.strong-points {
   width: 1440px;
   height: 613px;
   margin: 20px;
 }
-.Strong-points p {
+.strong-points p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
 }
-.Strong-points h3 {
+.strong-points h3 {
   font-family: Playfair Display;
   font-weight: 500;
   font-size: 86px;
   line-height: 86px;
 }
-.Strong-points li {
+.strong-points li {
   list-style: none;
   font-family: Bitter, serif;
   font-weight: 400;
