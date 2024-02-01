@@ -47,11 +47,14 @@ body {
   width: 1440px;
   height: 630px;
   background-image: url(img/BG.jpg);
+  box-sizing: border-box;
+  display: flex;
 }
 .studio {
   width: 690px;
   height: 360px;
   background-color: #ffffff;
+  margin: auto;
 }
 .studio h2 {
   font-family: Playfair Display, serif;
