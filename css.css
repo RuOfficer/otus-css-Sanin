@@ -16,7 +16,7 @@ body {
   margin: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-betweenc;
+  justify-content: space-between;
 }
 .nav-head h1 {
   font-family: Playfair Display, serif;
