@@ -29,6 +29,7 @@ body {
   height: 28px;
   display: flex;
   justify-content: right;
+  margin-right: 40px;
 }
 .navbar-top ul {
   display: flex;
