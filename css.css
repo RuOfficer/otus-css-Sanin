@@ -94,6 +94,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 200px;
+  gap: 20px;
 }
 .left-card-biog {
   padding-right: 10px;
@@ -103,13 +104,15 @@ body {
 .biography img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
-.paragraph {
+.biog-paragraph {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
-  transform: rotate(270deg);
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
   align-self: flex-start;
 }
 
@@ -161,7 +164,7 @@ body {
   width: 1440px;
   height: 677px;
   display: flex;
-  margin: 20px;
+  margin-bottom: 100px;
 }
 .designers p {
   font-family: Roboto, sans-serif;
@@ -197,21 +200,34 @@ body {
 /* отзывы */
 
 .testimonials {
+  display: grid;
+  grid-template-columns: 98px 451px 28px 451px;
+  grid-template-rows: 760px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   width: 1400px;
   height: 760px;
-  margin: 20px;
+  margin-bottom: 200px;
+  gap: 30px;
 }
 .keghan {
   width: 451px;
   height: 760px;
 }
-.testimonials p {
+.website-box {
+  display: flex;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+
+.website-box p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 18.75px;
 }
-.testimonials a {
+.website-box a {
   font-style: normal;
   color: #000000;
   text-decoration: none;
@@ -219,13 +235,32 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 18.75px;
+  margin-bottom: 60px;
 }
-.testimonials h3 {
+
+.title-box {
+  align-self: start;
+}
+
+.title-box h3 {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
-  text-align: right;
+  text-align: center;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+}
+.second-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.quote-box {
+  width: 221px;
+  height: 304px;
 }
 .second-part p {
   font-family: Bitter, serif;
