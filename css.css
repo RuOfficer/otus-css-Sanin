@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
+  overflow-x: hidden;
   background: #ffffff;
 }
 
@@ -114,6 +116,7 @@ body {
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   align-self: flex-start;
+  margin-top: 10px;
 }
 
 .right-card-biog {
@@ -147,6 +150,11 @@ body {
   font-size: 18px;
   line-height: 21.09px;
 }
+.quote img {
+  width: 20px;
+  height: 6px;
+  margin-bottom: 10px;
+}
 .quote {
   width: 468px;
   height: 148px;
@@ -163,14 +171,23 @@ body {
 .designers {
   width: 1440px;
   height: 677px;
-  display: flex;
   margin-bottom: 100px;
+}
+.designers-scroll {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 619px;
+  align-items: baseline;
+  margin: 0 20px 0 20px;
+  overflow: scroll;
 }
 .designers p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
+  margin: 0 0 30px 165px;
 }
 .foto-jess {
   width: 572px;
@@ -204,7 +221,7 @@ body {
   grid-template-columns: 5% 30% 5% 30%;
   grid-template-rows: 760px;
   justify-content: center;
-
+  overflow: scroll;
   width: 100%;
   height: 760px;
   margin-bottom: 200px;
