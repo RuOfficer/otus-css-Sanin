@@ -400,8 +400,8 @@ body {
   height: 168px;
   background: #0d0d0d;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
 }
 .bottom-panel a {
   font-style: normal;
