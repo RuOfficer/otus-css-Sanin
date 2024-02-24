@@ -19,6 +19,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 .nav-head h1 {
   font-family: Playfair Display, serif;
   font-weight: 600;
@@ -129,7 +130,7 @@ body {
   gap: 50px;
 }
 .header-cart {
-  width: 466px;
+  width: 100%;
   height: 230px;
 }
 
@@ -174,6 +175,7 @@ body {
   height: 677px;
   margin-bottom: 150px;
 }
+
 .designers p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -208,15 +210,15 @@ body {
 .cart-two {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   gap: 25px;
-}
-.cart-two pre {
-  align-self: center;
 }
 .foto-kameron {
   width: 336px;
   height: 440px;
 }
+
 .cart-three {
   display: flex;
   flex-direction: column;
