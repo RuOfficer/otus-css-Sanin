@@ -14,7 +14,21 @@
   </head>
   <body>
     <!-- шапка с навигационной панелью -->
-
+    <!-- ---------------мобильная----------------- -->
+    <header class="nav-head-mini">
+      <nav class="nav-mini">
+        <hr />
+        <ul class="menu-mobile">
+          <li><a href="#">B</a></li>
+          <li><a href="#">D</a></li>
+          <li><a href="#">T</a></li>
+          <li><a href="#">S</a></li>
+        </ul>
+        <hr />
+      </nav>
+      <!-- -------------------------------------------- -->
+      <!-- -------------------большой экран------------------- -->
+    </header>
     <header class="nav-head">
       <h1>Mod</h1>
       <nav class="navbar-top">
@@ -26,6 +40,7 @@
         </ul>
       </nav>
     </header>
+    <!-- ----------------------------------------------------- -->
     <main>
       <!-- Банер с логотипом компании -->
 
@@ -42,7 +57,13 @@
 
       <section class="biography">
         <div class="left-card-biog">
-          <img src="img/Katya Mills.jpg" alt="Foto Katya Mills" />
+          <picture>
+            <source
+              srcset="/mobile/jared-weiss-mobile.jpg"
+              media="(max-width: 450px)"
+            />
+            <img src="img/Katya Mills.jpg" alt="Foto Katya Mills" />
+          </picture>
         </div>
         <div class="biog-paragraph"><p>Biography</p></div>
 
@@ -52,18 +73,38 @@
             <h2>Mills</h2>
           </div>
           <div class="proff-container">
-            <pre>
-  Art Director
-  Scenography / Styling / Creative Photography / Design</pre
-            >
+            Art Director
+            <ul class="title-art">
+              <li>
+                <p>-</p>
+                Scenography &nbsp
+              </li>
+              <li>
+                <span> / </span>
+                <p>-</p>
+                Styling &nbsp
+              </li>
+              <li>
+                <span> / </span>
+                <p>-</p>
+                Creative Photography &nbsp
+              </li>
+              <li>
+                <span> / </span>
+                <p>-</p>
+                Design
+              </li>
+            </ul>
           </div>
           <div class="quote">
             <div>
               <img src="img/Rectangle 5.jpg" alt="Rectangle" />
             </div>
             <q>
-              The more I deal with the work as something that is my own, as
-              something that is personal, the more successful it is
+              The more I deal with <br />
+              the work as something that is my own,<br />
+              as something that<br />
+              is personal, the more successful it is
             </q>
           </div>
         </div>
@@ -188,7 +229,12 @@ Skills/<span>Design Strategy / Marketing</span
               people, people who challenge me.
             </p>
           </div>
-          <img src="img/shoping.jpg" alt="foto-sinnita" />
+          <picture>
+            <source
+              media="(max-width: 450px)"
+              srcset="/mobile/sinitta-leunen-mobile.jpg" />
+            <img src="img/shoping.jpg" alt="foto-sinnita"
+          /></picture>
         </div>
       </section>
 
