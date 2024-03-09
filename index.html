@@ -14,21 +14,7 @@
   </head>
   <body>
     <!-- шапка с навигационной панелью -->
-    <!-- ---------------мобильная----------------- -->
-    <header class="nav-head-mini">
-      <nav class="nav-mini">
-        <hr />
-        <ul class="menu-mobile">
-          <li><a href="#">B</a></li>
-          <li><a href="#">D</a></li>
-          <li><a href="#">T</a></li>
-          <li><a href="#">S</a></li>
-        </ul>
-        <hr />
-      </nav>
-      <!-- -------------------------------------------- -->
-      <!-- -------------------большой экран------------------- -->
-    </header>
+
     <header class="nav-head">
       <h1>Mod</h1>
       <nav class="navbar-top">
@@ -55,7 +41,7 @@
 
       <!-- биография Katya Milss -->
 
-      <section class="biography">
+      <section id="biography" class="biography">
         <div class="left-card-biog">
           <picture>
             <source
@@ -112,17 +98,15 @@
 
       <!-- Дезайнеры -->
 
-      <section class="designers">
-        <p>Designers</p>
+      <section id="designers" class="designers">
+        <p class="designers-heading">Designers</p>
         <div class="designers-scroll">
           <div class="cart-one">
             <img class="foto-jess" src="img/Jess.jpg" alt="Foto Jess" />
-            <pre>
-              JESS WONDER
-              From/ <span>Be more flower</span> 
-              Skills/<span>Design Strategy / Marketing</span
-              >
-            </pre>
+            <p>
+              JESS WONDER <br />From/ <span>Be more flower</span>
+              <br />Skills/<span>Design Strategy / Marketing</span>
+            </p>
           </div>
           <div class="cart-two">
             <img
@@ -130,12 +114,10 @@
               src="img/Kameron C.jpg"
               alt="Foto Kameron"
             />
-            <pre>
-KAMERON CLEIN
-From/ <span>Be more flower</span> 
-Skills/<span>Design Strategy / Marketing</span
-              >
-            </pre>
+            <p>
+              KAMERON CLEIN <br />From/ <span>Be more flower</span>
+              <br />Skills/<span>Design Strategy / Marketing</span>
+            </p>
           </div>
           <div class="cart-three">
             <img
@@ -143,12 +125,10 @@ Skills/<span>Design Strategy / Marketing</span
               src="img/Louisse.jpg"
               alt="Foto Louisse"
             />
-            <pre>
-LOUISSE RED
-From/ <span>Be more flower</span> 
-Skills/<span>Design Strategy / Marketing</span
-              >
-            </pre>
+            <p>
+              LOUISSE RED <br />From/ <span>Be more flower</span>
+              <br />Skills/<span>Design Strategy / Marketing</span>
+            </p>
           </div>
           <div class="cart-two">
             <img
@@ -156,12 +136,10 @@ Skills/<span>Design Strategy / Marketing</span
               src="img/Kameron C.jpg"
               alt="Foto Kameron"
             />
-            <pre>
-KAMERON CLEIN
-From/ <span>Be more flower</span> 
-Skills/<span>Design Strategy / Marketing</span
-              >
-            </pre>
+            <p>
+              KAMERON CLEIN <br />From/ <span>Be more flower</span>
+              <br />Skills/<span>Design Strategy / Marketing</span>
+            </p>
           </div>
           <div class="cart-three">
             <img
@@ -169,28 +147,24 @@ Skills/<span>Design Strategy / Marketing</span
               src="img/Louisse.jpg"
               alt="Foto Louisse"
             />
-            <pre>
-LOUISSE RED
-From/ <span>Be more flower</span> 
-Skills/<span>Design Strategy / Marketing</span
-              >
-            </pre>
+            <p>
+              LOUISSE RED <br />From/ <span>Be more flower</span>
+              <br />Skills/<span>Design Strategy / Marketing</span>
+            </p>
           </div>
           <div class="cart-one">
             <img class="foto-jess" src="img/Jess.jpg" alt="Foto Jess" />
-            <pre>
-              JESS WONDER
-              From/ <span>Be more flower</span> 
-              Skills/<span>Design Strategy / Marketing</span
-              >
-            </pre>
+            <p>
+              JESS WONDER <br />From/ <span>Be more flower</span>
+              <br />Skills/<span>Design Strategy / Marketing</span>
+            </p>
           </div>
         </div>
       </section>
 
       <!-- отзывы  -->
 
-      <section class="testimonials">
+      <section id="testimonials" class="testimonials">
         <div class="website-box">
           <div class="website-1">
             <p>Creativity</p>
@@ -239,7 +213,7 @@ Skills/<span>Design Strategy / Marketing</span
       </section>
 
       <!-- достоинства -->
-      <section class="strong-points">
+      <section id="strong-points" class="strong-points">
         <p>Strong points</p>
         <article class="sp-group">
           <img src="img/Mackbook.jpg" alt="Foto laptop" />
@@ -267,6 +241,16 @@ Skills/<span>Design Strategy / Marketing</span
           <img src="img/avery-klein.jpg" alt="Foto avery-klein" />
         </article>
       </section>
+      <nav class="nav-mini">
+        <hr />
+        <ul class="menu-mobile">
+          <li><a href="#biography">B</a></li>
+          <li><a href="#designers">D</a></li>
+          <li><a href="#testimonials">T</a></li>
+          <li><a href="#strong-points">S</a></li>
+        </ul>
+        <hr />
+      </nav>
     </main>
 
     <footer class="bottom-panel">

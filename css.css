@@ -7,6 +7,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: #ffffff;
@@ -31,7 +34,7 @@ ul {
   }
 }
 @media (min-width: 451px) {
-  .nav-head-mini {
+  .nav-mini {
     display: none;
   }
 }
@@ -55,33 +58,13 @@ ul {
   list-style: none;
 }
 .navbar-top li {
-  /* margin-right: 20px; */
   padding-left: 50px;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: clamp(0.875rem, 2vw, 1.75rem);
   line-height: 28px;
 }
-/* --------------мобильное меню----------------- */
 
-.nav-head-mini {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  align-items: flex-start;
-}
-.menu-mobile {
-  display: flex;
-  justify-content: space-around;
-  padding: 16px 0;
-}
-.menu-mobile a {
-  font-family: Bitter, serif;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 48px;
-}
-/* ------------------------------------------------- */
 /* Банер с логотипом компании */
 
 .hero-section {
@@ -209,6 +192,11 @@ ul {
   justify-content: space-around;
   gap: 50px;
 }
+@media (max-width: 450px) {
+  .right-card-biog {
+    max-width: 100%;
+  }
+}
 
 .header-cart {
   width: 100%;
@@ -217,6 +205,7 @@ ul {
 @media (max-width: 450px) {
   .header-cart {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     order: 2;
     justify-content: center;
@@ -281,13 +270,14 @@ ul {
   height: 6px;
   margin-bottom: 10px;
 }
-@media (max-width: 450px) {
+@media (max-width: 450px) and (min-width: 432px) {
   .quote img {
     position: relative;
     top: 340px;
     left: 8px;
   }
 }
+
 .quote {
   width: 100%;
   height: 148px;
@@ -321,6 +311,7 @@ ul {
     }
   }
 }
+
 /* Дезайнеры */
 
 .designers {
@@ -336,16 +327,16 @@ ul {
   }
 }
 
-.designers p {
+.designers-heading {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   line-height: 28.13px;
-  margin: 0 0 30px 165px;
+  margin: 0 0 30px 138px;
 }
 @media (max-width: 450px) {
-  .designers p {
-    margin: 0 0 30px 16px;
+  .designers-heading {
+    margin: 0 0 30px 18px;
   }
 }
 .designers-scroll {
@@ -389,12 +380,11 @@ ul {
     height: 439px;
   }
 }
-.cart-one pre {
+.cart-one p {
   align-self: center;
-  padding-left: 90px;
 }
 @media (max-width: 450px) {
-  .cart-one pre {
+  .cart-one p {
     align-self: flex-start;
     padding: 0;
   }
@@ -416,14 +406,14 @@ ul {
   flex-direction: column;
   gap: 25px;
 }
-.cart-three pre {
+.cart-three p {
   align-self: flex-start;
 }
 .foto-Louisse {
   width: 331px;
   height: 440px;
 }
-.designers pre {
+.designers-scroll p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -467,16 +457,25 @@ ul {
 }
 @media (max-width: 450px) {
   .website-box {
-    width: 90%;
-    flex-wrap: wrap-reverse;
+    max-width: 90%;
+    flex-wrap: wrap;
     justify-content: flex-start;
     transform: none;
     writing-mode: initial;
     order: 1;
-    gap: 28px;
-    padding-top: 20px;
+    gap: 26px;
+    padding-top: 30px;
   }
 }
+@media (max-width: 450px) {
+  .website-1 {
+    order: 2;
+  }
+  .website-2 {
+    order: 3;
+  }
+}
+
 .website-box p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
@@ -518,7 +517,7 @@ ul {
   text-align: center;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
-  margin-top: 5px;
+  margin-top: 15px;
 }
 @media (max-width: 450px) {
   .title-box h3 {
@@ -586,11 +585,11 @@ ul {
 .strong-points {
   width: 100%;
   height: 613px;
-  margin-bottom: 150px;
+  margin-bottom: 82px;
 }
 @media (max-width: 450px) {
   .strong-points {
-    width: 450px;
+    width: 100%;
     height: 503px;
   }
 }
@@ -693,6 +692,28 @@ ul {
   max-height: 555px;
 }
 
+/* --------------мобильное меню----------------- */
+
+.nav-mini {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  align-items: flex-start;
+  margin-bottom: 105px;
+}
+.menu-mobile {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+}
+.menu-mobile a {
+  font-family: Bitter, serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+}
+/* ------------------------------------------------- */
+
 /* подвал */
 
 .bottom-panel {
@@ -703,6 +724,15 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+}
+@media (max-width: 450px) {
+  .bottom-panel address {
+    align-self: flex-end;
+  }
+  .copyright {
+    align-self: normal;
+    padding-right: 80px;
+  }
 }
 
 .bottom-panel a {
@@ -721,6 +751,7 @@ ul {
   line-height: 21.09px;
   color: #ffffff;
 }
+
 .bottom-panel span {
   font-family: Roboto, sans-serif;
   font-weight: 900;
