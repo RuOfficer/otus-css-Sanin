@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Otus</title>
+    <link rel="stylesheet" href="style.scss" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="css.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,14 +17,18 @@
   <body>
     <!-- шапка с навигационной панелью -->
 
-    <header class="nav-head">
-      <h1>Mod</h1>
-      <nav class="navbar-top">
-        <ul class="list-top">
-          <li><a href="#">Biography</a></li>
-          <li><a href="#">Designers</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Strong points</a></li>
+    <header class="header">
+      <h1 class="header__logo">Mod</h1>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item"><a href="#biography">Biography</a></li>
+          <li class="menu__list-item"><a href="#designers">Designers</a></li>
+          <li class="menu__list-item">
+            <a href="#testimonials">Testimonials</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#strong-points">Strong points</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -32,10 +37,10 @@
       <!-- Банер с логотипом компании -->
 
       <section class="hero-section">
-        <article class="studio">
+        <article class="hero-section__studio">
           <div>
-            <h2>Mod Studio</h2>
-            <p>Modern Web Studio</p>
+            <h2 class="hero-section__heading">Mod Studio</h2>
+            <p class="hero-section__title">Modern Web Studio</p>
           </div>
         </article>
       </section>
@@ -43,51 +48,60 @@
       <!-- биография Katya Milss -->
 
       <section id="biography" class="biography">
-        <div class="left-card-biog">
-          <picture>
+        <div class="left-card">
+          <picture class="left-card__pic">
             <source
+              class="pic-img-mobile"
               srcset="/mobile/jared-weiss-mobile.jpg"
               media="(max-width: 450px)"
             />
-            <img src="img/Katya Mills.jpg" alt="Foto Katya Mills" />
+            <img
+              class="pic-img-laptop"
+              src="img/Katya Mills.jpg"
+              alt="Foto Katya Mills"
+            />
           </picture>
         </div>
-        <div class="biog-paragraph"><p>Biography</p></div>
+        <div class="head-title head-title_transform"><p>Biography</p></div>
 
-        <div class="right-card-biog">
-          <div class="header-cart">
-            <h2>Katya</h2>
-            <h2>Mills</h2>
+        <div class="right-card">
+          <div class="right-card__author">
+            <h2 class="right-card__name">Katya</h2>
+            <h2 class="right-card__name">Mills</h2>
           </div>
-          <div class="proff-container">
-            Art Director
+          <div class="right-card__proff-container">
+            <p>Art Director</p>
             <ul class="title-art">
               <li>
-                <p>-</p>
+                <p class="title-art__blank">-</p>
                 Scenography &nbsp
               </li>
               <li>
-                <span> / </span>
-                <p>-</p>
+                <span class="title-art__slash"> / </span>
+                <p class="title-art__blank">-</p>
                 Styling &nbsp
               </li>
               <li>
-                <span> / </span>
-                <p>-</p>
+                <span class="title-art__slash"> / </span>
+                <p class="title-art__blank">-</p>
                 Creative Photography &nbsp
               </li>
               <li>
-                <span> / </span>
-                <p>-</p>
+                <span class="title-art__slash"> / </span>
+                <p class="title-art__blank">-</p>
                 Design
               </li>
             </ul>
           </div>
           <div class="quote">
             <div>
-              <img src="img/Rectangle 5.jpg" alt="Rectangle" />
+              <img
+                class="quote__rectangle"
+                src="img/Rectangle 5.jpg"
+                alt="Rectangle"
+              />
             </div>
-            <q>
+            <q class="quote__text">
               The more I deal with <br />
               the work as something that is my own,<br />
               as something that<br />
@@ -100,64 +114,90 @@
       <!-- Дезайнеры -->
 
       <section id="designers" class="designers">
-        <p class="designers-heading">Designers</p>
-        <div class="designers-scroll">
-          <div class="cart-one">
-            <img class="foto-jess" src="img/Jess.jpg" alt="Foto Jess" />
-            <p>
-              JESS WONDER <br />From/ <span>Be more flower</span>
-              <br />Skills/<span>Design Strategy / Marketing</span>
+        <p class="designers__heading">Designers</p>
+        <div class="designers__scroll">
+          <div class="designers__cart-one">
+            <img
+              class="designers__foto-jess"
+              src="img/Jess.jpg"
+              alt="Foto Jess"
+            />
+            <p class="designers__description designers__description--central">
+              JESS WONDER <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
             </p>
           </div>
-          <div class="cart-two">
+          <div class="designers__cart cart-two">
             <img
-              class="foto-kameron"
+              class="designers__foto-kameron"
               src="img/Kameron C.jpg"
               alt="Foto Kameron"
             />
-            <p>
-              KAMERON CLEIN <br />From/ <span>Be more flower</span>
-              <br />Skills/<span>Design Strategy / Marketing</span>
+            <p class="designers__description">
+              KAMERON CLEIN <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
             </p>
           </div>
-          <div class="cart-three">
+          <div class="designers__cart cart-three">
             <img
-              class="foto-Louisse"
+              class="designers__foto-louisse"
               src="img/Louisse.jpg"
               alt="Foto Louisse"
             />
-            <p>
-              LOUISSE RED <br />From/ <span>Be more flower</span>
-              <br />Skills/<span>Design Strategy / Marketing</span>
+            <p class="designers__description">
+              LOUISSE RED <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
             </p>
           </div>
-          <div class="cart-two">
+          <div class="designers__cart cart-two">
             <img
-              class="foto-kameron"
+              class="designers__foto-kameron"
               src="img/Kameron C.jpg"
               alt="Foto Kameron"
             />
-            <p>
-              KAMERON CLEIN <br />From/ <span>Be more flower</span>
-              <br />Skills/<span>Design Strategy / Marketing</span>
+            <p class="designers__description">
+              KAMERON CLEIN <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
             </p>
           </div>
-          <div class="cart-three">
+          <div class="designers__cart cart-three">
             <img
-              class="foto-Louisse"
+              class="designers__foto-louisse"
               src="img/Louisse.jpg"
               alt="Foto Louisse"
             />
-            <p>
-              LOUISSE RED <br />From/ <span>Be more flower</span>
-              <br />Skills/<span>Design Strategy / Marketing</span>
+            <p class="designers__description">
+              LOUISSE RED <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
             </p>
           </div>
-          <div class="cart-one">
-            <img class="foto-jess" src="img/Jess.jpg" alt="Foto Jess" />
-            <p>
-              JESS WONDER <br />From/ <span>Be more flower</span>
-              <br />Skills/<span>Design Strategy / Marketing</span>
+          <div class="designers__cart cart-one">
+            <img
+              class="designers__foto-jess"
+              src="img/Jess.jpg"
+              alt="Foto Jess"
+            />
+            <p class="designers__description designers__description--central">
+              JESS WONDER <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
             </p>
           </div>
         </div>
@@ -166,103 +206,136 @@
       <!-- отзывы  -->
 
       <section id="testimonials" class="testimonials">
-        <div class="website-box">
-          <div class="website-1">
-            <p>Creativity</p>
+        <div class="testimonials__website-box">
+          <div class="testimonials__website testimonials__website-1">
+            <p class="testimonials__title">Creativity</p>
             <address>
-              <a href="www.whitepapers.com">www.whitepapers.com</a>
+              <a class="testimonials__link" href="www.whitepapers.com"
+                >www.whitepapers.com</a
+              >
             </address>
           </div>
-          <div class="website-2">
-            <p>Creativity</p>
+          <div class="testimonials__website testimonials__website-2">
+            <p class="testimonials__title">Creativity</p>
             <address>
-              <a href="www.whitepapers.com">www.whitepapers.com</a>
+              <a class="testimonials__link" href="www.whitepapers.com"
+                >www.whitepapers.com</a
+              >
             </address>
           </div>
-          <div class="website-3">
-            <p>Website</p>
+          <div class="testimonials__website testimonials__website-3">
+            <p class="testimonials__title">Website</p>
             <address>
-              <a href="www.whitepapers.com">www.whitepapers.com</a>
+              <a class="testimonials__link" href="www.whitepapers.com"
+                >www.whitepapers.com</a
+              >
             </address>
           </div>
         </div>
 
-        <div class="keghan-container">
+        <div class="testimonials__keghan-container">
           <img
-            class="keghan"
+            class="testimonials__keghan-img"
             src="img/keghan-crosslan big-unsplash 1 2.jpg"
-            alt=""
+            alt="keghan-crosslan"
           />
         </div>
 
-        <div class="title-box"><h3>Testimonials</h3></div>
+        <p class="testimonials__title-box">Testimonials</p>
 
-        <div class="second-part">
-          <div class="quote-box">
-            <p>
+        <div class="testimonials__second-part">
+          <div class="testimonials__quote-box">
+            <p class="testimonials__quote">
               I just really want to do good work and work with some great
               people, people who challenge me.
             </p>
           </div>
-          <picture>
+          <picture class="testimonials__pic">
             <source
               media="(max-width: 450px)"
               srcset="/mobile/sinitta-leunen-mobile.jpg" />
-            <img src="img/shoping.jpg" alt="foto-sinnita"
+            <img
+              class="testimonials__img"
+              src="img/shoping.jpg"
+              alt="foto-sinnita"
           /></picture>
         </div>
       </section>
 
       <!-- достоинства -->
       <section id="strong-points" class="strong-points">
-        <p>Strong points</p>
-        <article class="sp-group">
-          <img src="img/Mackbook.jpg" alt="Foto laptop" />
-          <img src="img/avery-klein.jpg" alt="Foto avery-klein" />
+        <p class="strong-points__title">Strong points</p>
+        <article class="strong-points__sp-group">
+          <img
+            class="strong-points__img"
+            src="img/Mackbook.jpg"
+            alt="Foto laptop"
+          />
+          <img
+            class="strong-points__img"
+            src="img/avery-klein.jpg"
+            alt="Foto avery-klein"
+          />
           <div class="strengths-list">
-            <h3>Strengths</h3>
-            <ul class="list-events">
-              <li><a href="#">Interiors</a></li>
-              <li><a href="#">Outdoors</a></li>
-              <li><a href="#">Portraits</a></li>
-              <li><a href="#">Styling</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Architecture</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Celebrations</a></li>
-              <li><a href="#">Fashion</a></li>
-              <li><a href="#">Nature</a></li>
+            <h3 class="strengths-list__heading">Strengths</h3>
+            <ul class="strong-points__list-events">
+              <li><a class="strong-points__link" href="#">Interiors</a></li>
+              <li><a class="strong-points__link" href="#">Outdoors</a></li>
+              <li><a class="strong-points__link" href="#">Portraits</a></li>
+              <li><a class="strong-points__link" href="#">Styling</a></li>
+              <li><a class="strong-points__link" href="#">Events</a></li>
+              <li><a class="strong-points__link" href="#">Architecture</a></li>
+              <li><a class="strong-points__link" href="#">Design</a></li>
+              <li><a class="strong-points__link" href="#">Celebrations</a></li>
+              <li><a class="strong-points__link" href="#">Fashion</a></li>
+              <li><a class="strong-points__link" href="#">Nature</a></li>
             </ul>
           </div>
           <img
-            class="big-img"
+            class="strong-points__img"
             src="img/keghan-crosslan big-unsplash 1 2.jpg"
             alt="Foto keghan"
           />
-          <img src="img/avery-klein.jpg" alt="Foto avery-klein" />
+          <img
+            class="strong-points__img"
+            src="img/avery-klein.jpg"
+            alt="Foto avery-klein"
+          />
         </article>
       </section>
-      <nav class="nav-mini">
+
+      <!-- ---------навигационное мобильное меню----------------- -->
+      <nav class="navigation-mini">
         <hr />
-        <ul class="menu-mobile">
-          <li><a href="#biography">B</a></li>
-          <li><a href="#designers">D</a></li>
-          <li><a href="#testimonials">T</a></li>
-          <li><a href="#strong-points">S</a></li>
+        <ul class="navigation-mini__menu-mobile">
+          <li><a class="navigation-mini__link" href="#biography">B</a></li>
+          <li><a class="navigation-mini__link" href="#designers">D</a></li>
+          <li><a class="navigation-mini__link" href="#testimonials">T</a></li>
+          <li><a class="navigation-mini__link" href="#strong-points">S</a></li>
         </ul>
         <hr />
       </nav>
+
+      <!-- ------------------------------------------------------------- -->
     </main>
 
-    <footer class="bottom-panel">
-      <address>
-        <a href="+7 921 123-45-67">+7 921 123-45-67</a><br />
-        <a href="info@modstudio.com">INFO@MODSTUDIO.COM</a>
+    <footer class="footer-panel">
+      <address class="footer-panel__data">
+        <a class="footer-panel__link" href="+7 921 123-45-67"
+          >+7 921 123-45-67</a
+        ><br />
+        <a class="footer-panel__link" href="info@modstudio.com"
+          >INFO@MODSTUDIO.COM</a
+        >
       </address>
 
-      <p>A product of <span>MOD</span></p>
+      <p class="footer-panel__title">
+        A product of <span class="footer-panel__text">MOD</span>
+      </p>
 
-      <p class="copyright">© 2023 Mod Media. All rights reserved</p>
+      <p class="footer-panel__copyright">
+        © 2023 Mod Media. All rights reserved
+      </p>
     </footer>
   </body>
 </html>
