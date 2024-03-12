@@ -15,6 +15,30 @@
     />
   </head>
   <body>
+    <!-- ------------модальное окно---------------- -->
+
+    <button id="openModal">Открыть модальное окно</button>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal__title">Get in touch</h2>
+        <p class="modal__question">
+          Do you have any questions? Have something to say? Don't be shy, write
+          to us:
+        </p>
+
+        <form id="form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <button class="btn" type="reset">Cancel</button>
+          <button class="btn" type="submit">+ Send</button>
+        </form>
+      </div>
+    </div>
+    <!-- ------------------------------------------------- -->
     <!-- шапка с навигационной панелью -->
 
     <header class="header">
@@ -27,7 +51,7 @@
             <a href="#testimonials">Testimonials</a>
           </li>
           <li class="menu__list-item">
-            <a href="#strong-points">Strong points</a>
+            <a href="#strong-points">Strqong points</a>
           </li>
         </ul>
       </nav>
@@ -337,5 +361,6 @@
         © 2023 Mod Media. All rights reserved
       </p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
