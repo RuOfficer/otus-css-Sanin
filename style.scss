@@ -1,0 +1,841 @@
+@import "reset.css";
+@import "_var.scss";
+@import "_mix.scss";
+.btn {
+  width: 179px;
+  height: 55px;
+  border-radius: 8px;
+  border: 1.32px solid $secondary-color;
+  @include main-font($ff, $fw, $fs, $lh, $fc);
+  text-align: center;
+  &--open {
+    position: absolute;
+    right: 0;
+    width: 60px;
+  }
+  &--btnClose {
+    border: 1.32px solid #566789;
+  }
+  &--btnSub {
+    background-color: $secondary-color;
+    color: #ffffff;
+  }
+}
+@media (max-width: 750px) {
+  .wrap-modal {
+    display: none;
+  }
+}
+.modal {
+  z-index: 500;
+  position: fixed;
+  padding-top: 100px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &-content {
+    width: 480px;
+    height: 588px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin: auto;
+    background-color: $primary-color;
+    padding: 20px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    height: 69px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__input {
+    height: 42px;
+    border-radius: 8px;
+    border: 1px solid #0000004d;
+    padding-left: 10px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    align-self: flex-start;
+  }
+  &__question {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__label--text {
+    height: 162px;
+  }
+  &__input--name {
+    background-image: url(/logo/logo_hum.svg);
+    background-repeat: no-repeat;
+    background-position: 400px 5px;
+  }
+  &__input--email {
+    background-image: url(/logo/ph_at.svg);
+    background-repeat: no-repeat;
+    background-position: 400px 5px;
+  }
+  &__input--text {
+    height: 135px;
+    padding-bottom: 100px;
+    background-image: url(/logo/logo_SmS.svg);
+    background-repeat: no-repeat;
+    background-position: 400px 5px;
+  }
+  &__btn {
+    display: flex;
+    gap: 20px;
+  }
+}
+#form {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  width: 440px;
+  justify-content: space-between;
+}
+
+.header {
+  width: 100%;
+  min-height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+    font-family: Playfair Display, serif;
+    font-weight: 600;
+    font-size: clamp(4.375rem, 5vw + 1rem, 5.375rem);
+    line-height: 103px;
+    padding-left: 50px;
+  }
+}
+.menu {
+  height: 28px;
+  display: flex;
+  justify-content: right;
+  &__list {
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  &__list-item {
+    padding-left: 50px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 2vw, 1.5rem);
+    line-height: 28px;
+  }
+}
+@media (max-width: 750px) {
+  .header {
+    display: none;
+  }
+}
+
+/*--------------- Банер с логотипом компании --------------*/
+
+.hero-section {
+  width: 100%;
+  height: 630px;
+  background-image: url(img/BG.jpg);
+  background-color: bisque;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+  &__studio {
+    width: 46%;
+    height: 360px;
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__heading {
+    font-family: Playfair Display, serif;
+    font-weight: 500;
+    font-size: clamp(4.375rem, 5vw + 1rem, 5.375rem);
+    line-height: 103px;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    line-height: 23.44px;
+    text-align: center;
+  }
+}
+@media (max-width: 750px) {
+  .hero-section {
+    margin-bottom: 225px;
+    height: 764px;
+    align-items: flex-start;
+    background-image: url(mobile/inside-weather-mobile.jpg);
+
+    .hero-section__studio {
+      width: 100%;
+      height: 344px;
+    }
+    .hero-section__heading {
+      padding-bottom: 0;
+    }
+  }
+}
+/*------------- биография Katya Milss -----------------*/
+
+.biography {
+  width: 100%;
+  height: 840px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  gap: 50px;
+}
+@media (max-width: 750px) {
+  .biography {
+    width: 100%;
+    height: 952px;
+    flex-direction: column-reverse;
+    gap: 0;
+    margin-bottom: -70px;
+  }
+}
+.left-card {
+  margin-left: 30px;
+  width: 40%;
+  height: 840px;
+}
+@media (max-width: 750px) {
+  .left-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+.pic-img-laptop {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.head-title {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 28.13px;
+}
+.head-title--transform {
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  align-self: flex-start;
+  margin-top: 3px;
+}
+@media (max-width: 750px) {
+  .head-title--transform {
+    writing-mode: inherit;
+    transform: rotate(0deg);
+    align-self: flex-end;
+    position: relative;
+    bottom: 380px;
+    right: 25px;
+  }
+}
+
+.right-card {
+  width: 38%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 50px;
+  padding-left: 30px;
+  &__author {
+    width: 100%;
+    height: 230px;
+  }
+  &__name {
+    font-family: Playfair Display, serif;
+    font-weight: 500;
+    font-size: clamp(4rem, 5vw + 1rem, 5.375rem);
+    line-height: 114.64px;
+  }
+  &__proff-container {
+    width: 100%;
+    height: 42px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.09px;
+  }
+}
+@media (max-width: 750px) {
+  .right-card {
+    width: 100%;
+    padding: 0;
+  }
+}
+.title-art {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.09px;
+  &__blank {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .right-card__author {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    order: 2;
+    justify-content: center;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 750px) {
+  .right-card__proff-container {
+    width: 308px;
+    height: 107px;
+    align-self: flex-start;
+    padding: 15px 0 0 20px;
+
+    .title-art {
+      justify-self: flex-start;
+      flex-direction: column;
+    }
+    .title-art__blank {
+      display: initial;
+    }
+    .title-art__slash {
+      display: none;
+    }
+  }
+}
+.quote {
+  width: 72%;
+  height: 148px;
+  display: flex;
+  &__rectangle {
+    width: 20px;
+    height: 6px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 1435px;
+    right: 570px;
+  }
+  &__text {
+    font-family: Bitter, serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 31.2px;
+  }
+  &__text br {
+    display: initial;
+  }
+}
+@media (max-width: 750px) {
+  .quote {
+    width: 100%;
+    height: 226px;
+    align-self: center;
+    padding-top: 22px;
+  }
+}
+@media (max-width: 750px) and (min-width: 432px) {
+  .quote__rectangle {
+    position: relative;
+    top: 315px;
+    left: 24px;
+  }
+}
+@media (max-width: 750px) {
+  .quote__text {
+    font-family: Bitter, serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  @media (max-width: 750px) {
+    .quote__text br {
+      display: initial;
+    }
+  }
+}
+/*---------------- Дезайнеры -------------------*/
+
+.designers {
+  width: 90%;
+  height: 677px;
+  margin-bottom: 150px;
+  &__heading {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 28.13px;
+    margin: 0 0 30px 138px;
+  }
+  &__scroll {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 619px;
+    align-items: baseline;
+    margin: 0 30px 0 17px;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+  &__cart-one {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  &__foto-jess {
+    width: 572px;
+    height: 538px;
+  }
+  &__description {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+    &-span {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18.75px;
+    }
+    &--central {
+      align-self: flex-end;
+      padding-right: 88px;
+    }
+  }
+  &__cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 25px;
+  }
+}
+@media (max-width: 750px) {
+  .designers {
+    width: 100%;
+    height: 573px;
+    margin-bottom: 65px;
+  }
+}
+@media (max-width: 750px) {
+  .designers__heading {
+    margin: 0 0 30px 17px;
+  }
+}
+@media (max-width: 750px) {
+  .designers__scroll {
+    grid-template-rows: 520px;
+    padding: 0;
+  }
+}
+@media (max-width: 750px) {
+  .designers__foto-jess {
+    width: 310px;
+    height: 439px;
+    object-fit: cover;
+  }
+  .designers__foto-kameron {
+    width: 309px;
+    height: 439px;
+  }
+  .designers__foto-Louisse {
+    width: 309px;
+    height: 439px;
+  }
+}
+@media (max-width: 750px) {
+  .designers__description {
+    align-self: flex-start;
+    padding: 0;
+  }
+}
+/* ------------- отзывы ------------------*/
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 5% 30% 5% 30%;
+  grid-template-rows: 760px;
+  justify-content: center;
+  width: 100%;
+  height: 760px;
+  margin-bottom: 150px;
+  gap: 28px;
+  &__website-box {
+    display: flex;
+    align-items: center;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    align-self: center;
+    gap: 20px;
+  }
+  &__website {
+    padding-left: 20px;
+  }
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+  &__link {
+    font-style: normal;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+    margin-bottom: 60px;
+  }
+  &__keghan-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__title-box {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.125rem, 1vw + 0.75rem, 1.5rem);
+    line-height: 28.13px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    margin-top: 15px;
+  }
+  &__title-box {
+    align-self: start;
+  }
+  &__second-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  &__img {
+    width: 100%;
+    padding-bottom: 40px;
+    object-fit: contain;
+  }
+  &__quote-box {
+    width: 50%;
+  }
+  &__quote {
+    font-family: Bitter, serif;
+    font-weight: 400;
+    font-size: clamp(1.875rem, 2vw + 0.5rem, 2rem);
+    line-height: 38.4px;
+    text-align: center;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__website-box {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    transform: none;
+    writing-mode: initial;
+    order: 1;
+    gap: 26px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__website-1 {
+    order: 2;
+  }
+  .testimonials__website-2 {
+    order: 3;
+  }
+}
+@media (max-width: 450px) {
+  .testimonials__title {
+    font-size: 12px;
+  }
+}
+@media (max-width: 450px) {
+  .testimonials__link {
+    font-size: 12px;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__keghan-img {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__title-box {
+    margin: 0;
+    writing-mode: initial;
+    transform: initial;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__title-box {
+    align-self: end;
+    padding: 0 14px 20px 0;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__second-part {
+    gap: 24px;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__img {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__pic {
+    order: 1;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__quote-box {
+    width: 75%;
+    order: 1;
+  }
+}
+@media (max-width: 750px) {
+  .testimonials__quote {
+    padding: 0;
+    line-height: 36px;
+    font-weight: 300;
+  }
+}
+/*----------------- достоинства -----------------*/
+// -------------------------------------------------
+
+.strong-points {
+  width: 100%;
+  height: 613px;
+  margin-bottom: 82px;
+  &__img {
+    height: 555px;
+  }
+  &__big-img {
+    max-width: 335px;
+    max-height: 100%;
+  }
+  &__sp-group {
+    display: flex;
+    gap: 45px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: scroll;
+  }
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    line-height: 28.13px;
+    padding-left: 260px;
+  }
+  &__list-events {
+    list-style: none;
+    font-family: Bitter, serif;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw - 0.5rem, 2.125rem);
+    line-height: 40.8px;
+  }
+}
+
+@media (max-width: 750px) {
+  .strong-points {
+    width: 100%;
+    height: 503px;
+  }
+}
+@media (max-width: 750px) {
+  .strong-points__img {
+    height: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .strong-points__title {
+    padding-left: 15px;
+  }
+}
+/*------------ поддержка браузером grid-layout ------------*/
+
+@supports (display: grid) {
+  .strong-points__sp-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 0.5fr;
+    grid-template-rows: 555px;
+    gap: 20px;
+    margin: 30px 0 0 20px;
+    overflow: auto;
+  }
+}
+@media (max-width: 750px) {
+  .strong-points__sp-group {
+    grid-template-rows: 453px;
+    height: 453px;
+    gap: 20px;
+    margin: 30px 0 0 14px;
+  }
+}
+.strengths-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &__heading {
+    font-family: Playfair Display;
+    font-weight: 500;
+    font-size: clamp(2.875rem, 6vw, 5.375rem);
+    line-height: 86px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 750px) {
+  .strengths-list__heading {
+    font-weight: 400;
+    line-height: 46px;
+    margin: 0;
+  }
+}
+@media (max-width: 750px) {
+  .strengths-list {
+    order: -1;
+    align-items: flex-start;
+  }
+}
+.navigation-mini {
+  align-items: flex-start;
+  margin-bottom: 105px;
+  @media (min-width: 751px) {
+    .navigation-mini {
+      display: none;
+    }
+  }
+  &__menu-mobile {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0;
+  }
+  &__link {
+    font-family: Bitter, serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+@media (min-width: 751px) {
+  .navigation-mini {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .strong-points__list-events {
+    line-height: 28.8px;
+    padding: 0 0 8px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+/*-------------- мобильное меню -----------------*/
+@media (min-width: 751px) {
+  .navigation-mini {
+    display: none;
+  }
+}
+
+/*--------------- подвал ---------------*/
+.footer-panel {
+  width: 100%;
+  height: 168px;
+  background: #0d0d0d;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  &__link {
+    text-decoration: underline;
+    font-style: normal;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $primary-color;
+  }
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.09px;
+    color: $primary-color;
+  }
+  &__text {
+    font-family: Roboto, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21.09px;
+    text-align: center;
+    color: $primary-color;
+  }
+  &__copyright {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18.75px;
+    color: $primary-color;
+  }
+}
+@media (max-width: 750px) {
+  .footer-panel__data {
+    align-self: flex-end;
+  }
+  .footer-panel__copyright {
+    align-self: normal;
+    padding-right: 80px;
+    padding-left: 5px;
+  }
+}
