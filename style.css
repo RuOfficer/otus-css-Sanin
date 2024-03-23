@@ -12,6 +12,17 @@
   color: #000000;
   text-align: center;
 }
+.btn:hover {
+  outline: 2px solid red;
+}
+.btn:focus {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  background-color: #566789;
+}
+.btn:active {
+  background-color: rgb(143, 143, 143);
+}
 .btn--open {
   position: fixed;
   right: 0;
@@ -81,6 +92,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18.75px;
+}
+.modal__input:focus {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 .modal__title {
   font-family: Roboto, sans-serif;
@@ -183,6 +198,12 @@
   font-weight: 500;
   font-size: clamp(0.875rem, 2vw, 1.5rem);
   line-height: 28px;
+}
+.menu__list-item:hover {
+  text-decoration: underline;
+}
+.menu__list-item:active {
+  color: #566789;
 }
 
 @media (max-width: 750px) {
@@ -1028,6 +1049,9 @@
   font-weight: 400;
   font-size: 40px;
   line-height: 48px;
+}
+.navigation-mini__link:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 751px) {

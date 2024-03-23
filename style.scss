@@ -6,6 +6,16 @@
   height: 55px;
   border-radius: 8px;
   border: 1.32px solid $secondary-color;
+  &:hover {
+    outline: 2px solid red;
+  }
+  &:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    background-color: #566789;
+  }
+  &:active {
+    background-color: rgb(143, 143, 143);
+  }
 
   @include main-font($ff, $fw, $fs, $lh, $fc);
   text-align: center;
@@ -70,6 +80,10 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 18.75px;
+
+    &:focus {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
   }
 
   &__title {
@@ -118,6 +132,7 @@
   justify-content: space-between;
 }
 //  <!--- шапка с навигационной панелью --->
+
 .header {
   width: 100%;
   min-height: 135px;
@@ -149,6 +164,12 @@
     font-weight: 500;
     font-size: clamp(0.875rem, 2vw, 1.5rem);
     line-height: 28px;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active {
+      color: #566789;
+    }
   }
 }
 @media (max-width: 750px) {
@@ -770,6 +791,9 @@
     font-weight: 400;
     font-size: 40px;
     line-height: 48px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 @media (min-width: 751px) {
