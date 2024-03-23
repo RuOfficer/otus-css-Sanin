@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Otus</title>
-    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/css/all.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,151 +14,395 @@
     />
   </head>
   <body>
-    <!-- шапка с навигационной панелью -->
-    <header class="nav-head">
-      <h1>Mod</h1>
-      <nav class="navbar-top">
-        <ul>
-          <li><a href="#">Biography</a></li>
-          <li><a href="#">Designers</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Strong points</a></li>
+    <!-- ------------модальное окно---------------- -->
+
+    <div class="wrap-modal">
+      <button class="btn btn--open" id="openModal">
+        <img src="/logo/logo_btn.svg" alt="log" />
+      </button>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <h2 class="modal__title">Get in touch</h2>
+          <p class="modal__question">
+            Do you have any questions? Have something to say? Don't be shy,
+            write to us:
+          </p>
+          <form id="form" method="dialog">
+            <label class="modal__label" for="name"
+              >Name
+
+              <input
+                class="modal__input modal__input--name"
+                type="text"
+                id="name"
+                name="name"
+                minlength="3"
+                placeholder="Name"
+                required
+              />
+            </label>
+            <label class="modal__label" for="email"
+              >Email:
+              <input
+                class="modal__input modal__input--email"
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="name@email.com"
+              />
+            </label>
+            <label class="modal__label modal__label--text" for="Comment"
+              >Comment<input
+                class="modal__input modal__input--text"
+                type="text"
+                placeholder="Some text..."
+            /></label>
+          </form>
+          <div class="modal__btn">
+            <button class="btn btn--color-grey" id="closeModal" type="button">
+              Cancel
+            </button>
+            <button class="btn btn--color-black" id="submitModal" type="submit">
+              + Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------------------------------------------------->
+    <!--- шапка с навигационной панелью --->
+
+    <header class="header">
+      <h1 class="header__logo">Mod</h1>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item"><a href="#biography">Biography</a></li>
+          <li class="menu__list-item"><a href="#designers">Designers</a></li>
+          <li class="menu__list-item">
+            <a href="#testimonials">Testimonials</a>
+          </li>
+          <li class="menu__list-item">
+            <a href="#strong-points">Strong points</a>
+          </li>
         </ul>
       </nav>
     </header>
+    <!-- ----------------------------------------------------- -->
     <main>
       <!-- Банер с логотипом компании -->
-      <section class="Hero-section">
-        <article class="studio">
-          <h2>Mod Studio</h2>
-          <p>Modern Web Studio</p>
+
+      <section class="hero-section">
+        <article class="hero-section__studio">
+          <div>
+            <h2 class="hero-section__heading">Mod Studio</h2>
+            <p class="hero-section__title">Modern Web Studio</p>
+          </div>
         </article>
       </section>
+
       <!-- биография Katya Milss -->
-      <section class="Biography">
-        <img src="img/Katya Mills.jpg" alt="Foto Katya Mills" />
-        <p>Biography</p>
-        <article>
-          <h2>Katya Mills</h2>
-          <pre>
-Art Director
-Scenography / Styling / Creative Photography / Design</pre
-          >
-          <q
-            >The more I deal with the work as something that is my own, as
-            something that is personal, the more successful it is</q
-          >
-        </article>
+
+      <section id="biography" class="biography">
+        <div class="left-card">
+          <picture class="left-card__pic">
+            <source
+              class="pic-img-mobile"
+              srcset="/mobile/jared-weiss-mobile.jpg"
+              media="(max-width: 450px)"
+            />
+            <img
+              class="pic-img-laptop"
+              src="img/Katya Mills.jpg"
+              alt="Foto Katya Mills"
+            />
+          </picture>
+        </div>
+        <div class="biography__head-title"><p>Biography</p></div>
+
+        <div class="right-card">
+          <div class="right-card__author">
+            <h2 class="right-card__name">Katya</h2>
+            <h2 class="right-card__name">Mills</h2>
+          </div>
+          <div class="right-card__proff-container">
+            <p>Art Director</p>
+            <ul class="title-art">
+              <li>
+                <p class="title-art__blank">-</p>
+                Scenography &nbsp
+              </li>
+              <li>
+                <span class="title-art__slash"> / </span>
+                <p class="title-art__blank">-</p>
+                Styling &nbsp
+              </li>
+              <li>
+                <span class="title-art__slash"> / </span>
+                <p class="title-art__blank">-</p>
+                Creative Photography &nbsp
+              </li>
+              <li>
+                <span class="title-art__slash"> / </span>
+                <p class="title-art__blank">-</p>
+                Design
+              </li>
+            </ul>
+          </div>
+          <div class="quote">
+            <div>
+              <img
+                class="quote__rectangle"
+                src="img/Rectangle 5.jpg"
+                alt="Rectangle"
+              />
+            </div>
+            <q class="quote__text">
+              The more I deal with <br />
+              the work as something that is my own,<br />
+              as something that<br />
+              is personal, the more successful it is
+            </q>
+          </div>
+        </div>
       </section>
 
       <!-- Дезайнеры -->
 
-      <section class="Designers">
-        <p>Designers</p>
-        <article>
-          <img class="foto-jess" src="img/Jess.jpg" alt="Foto Jess" />
-          <pre>
-            JESS WONDER
-            From/ <span>Be more flower</span> 
-            Skills/<span>Design Strategy / Marketing</span
-            >
-          </pre>
-        </article>
-        <article>
-          <img
-            class="foto-kameron"
-            src="img/Kameron C.jpg"
-            alt="Foto Kameron"
-          />
-          <pre>
-            KAMERON CLEIN
-            From/ <span>Be more flower</span> 
-            Skills/<span>Design Strategy / Marketing</span
-            >
-          </pre>
-        </article>
-        <article>
-          <img class="foto-Louisse" src="img/Louisse.jpg" alt="Foto Louisse" />
-          <pre>
-            LOUISSE RED
-            From/ <span>Be more flower</span> 
-            Skills/<span>Design Strategy / Marketing</span
-            >
-          </pre>
-        </article>
+      <section id="designers" class="designers">
+        <p class="designers__heading">Designers</p>
+        <div class="designers__scroll">
+          <div class="designers__cart-one">
+            <img
+              class="designers__foto-jess"
+              src="img/Jess.jpg"
+              alt="Foto Jess"
+            />
+            <p class="designers__description designers__description--central">
+              JESS WONDER <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
+            </p>
+          </div>
+          <div class="designers__cart cart-two">
+            <img
+              class="designers__foto-kameron"
+              src="img/Kameron C.jpg"
+              alt="Foto Kameron"
+            />
+            <p class="designers__description">
+              KAMERON CLEIN <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
+            </p>
+          </div>
+          <div class="designers__cart cart-three">
+            <img
+              class="designers__foto-louisse"
+              src="img/Louisse.jpg"
+              alt="Foto Louisse"
+            />
+            <p class="designers__description">
+              LOUISSE RED <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
+            </p>
+          </div>
+          <div class="designers__cart cart-two">
+            <img
+              class="designers__foto-kameron"
+              src="img/Kameron C.jpg"
+              alt="Foto Kameron"
+            />
+            <p class="designers__description">
+              KAMERON CLEIN <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
+            </p>
+          </div>
+          <div class="designers__cart cart-three">
+            <img
+              class="designers__foto-louisse"
+              src="img/Louisse.jpg"
+              alt="Foto Louisse"
+            />
+            <p class="designers__description">
+              LOUISSE RED <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
+            </p>
+          </div>
+          <div class="designers__cart cart-one">
+            <img
+              class="designers__foto-jess"
+              src="img/Jess.jpg"
+              alt="Foto Jess"
+            />
+            <p class="designers__description designers__description--central">
+              JESS WONDER <br />From/
+              <span class="description-span">Be more flower</span>
+              <br />Skills/<span class="description-span"
+                >Design Strategy / Marketing</span
+              >
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- отзывы  -->
 
-      <section class="Testimonials">
-        <article>
-          <p>Creativity</p>
-          <address>
-            <a href="www.whitepapers.com">www.whitepapers.com</a>
-          </address>
-        </article>
-        <article>
-          <p>Creativity</p>
-          <address>
-            <a href="www.whitepapers.com">www.whitepapers.com</a>
-          </address>
-        </article>
-        <article>
-          <p>Website</p>
-          <address>
-            <a href="www.whitepapers.com">www.whitepapers.com</a>
-          </address>
-        </article>
-        <img
-          class="keghan"
-          src="img/keghan-crossland-ZZxmc66SjfM-unsplash 1.jpg"
-          alt=""
-        />
-        <h3>Testimonials</h3>
-        <article class="second-part">
-          <p>
-            I just really want to do good work and work with some great people,
-            people who challenge me.
-          </p>
-          <img src="img/shoping.jpg" alt="foto-sinnita" />
-        </article>
+      <section id="testimonials" class="testimonials">
+        <div class="testimonials__website-box">
+          <div class="testimonials__website testimonials__website-1">
+            <p class="testimonials__title">Creativity</p>
+            <address>
+              <a class="testimonials__link" href="www.whitepapers.com"
+                >www.whitepapers.com</a
+              >
+            </address>
+          </div>
+          <div class="testimonials__website testimonials__website-2">
+            <p class="testimonials__title">Creativity</p>
+            <address>
+              <a class="testimonials__link" href="www.whitepapers.com"
+                >www.whitepapers.com</a
+              >
+            </address>
+          </div>
+          <div class="testimonials__website testimonials__website-3">
+            <p class="testimonials__title">Website</p>
+            <address>
+              <a class="testimonials__link" href="www.whitepapers.com"
+                >www.whitepapers.com</a
+              >
+            </address>
+          </div>
+        </div>
+
+        <div class="testimonials__keghan-container">
+          <img
+            class="testimonials__keghan-img"
+            src="img/keghan-crosslan big-unsplash 1 2.jpg"
+            alt="keghan-crosslan"
+          />
+        </div>
+
+        <p class="testimonials__title-box">Testimonials</p>
+
+        <div class="testimonials__second-part">
+          <div class="testimonials__quote-box">
+            <p class="testimonials__quote">
+              I just really want to do good work and work with some great
+              people, people who challenge me.
+            </p>
+          </div>
+          <picture class="testimonials__pic">
+            <source
+              media="(max-width: 450px)"
+              srcset="/mobile/sinitta-leunen-mobile.jpg" />
+            <img
+              class="testimonials__img"
+              src="img/shoping.jpg"
+              alt="foto-sinnita"
+          /></picture>
+        </div>
       </section>
 
       <!-- достоинства -->
-      <section class="Strong-points">
-        <article>
-          <p>Strong points</p>
-          <img src="img/Mackbook.jpg" alt="Foto laptop" />
-          <img src="img/avery-klein.jpg" alt="Foto avery-klein" />
-          <article>
-            <h3>Strengths</h3>
-            <ul>
-              <li><a href="#"></a>Interiors</li>
-              <li><a href="#"></a>Outdoors</li>
-              <li><a href="#"></a>Portraits</li>
-              <li><a href="#"></a>Styling</li>
-              <li><a href="#"></a>Events</li>
-              <li><a href="#"></a>Architecture</li>
-              <li><a href="#"></a>Design</li>
-              <li><a href="#"></a>Celebrations</li>
-              <li><a href="#"></a>Fashion</li>
-              <li><a href="#"></a>Nature</li>
-            </ul>
-          </article>
+      <section id="strong-points" class="strong-points">
+        <p class="strong-points__title">Strong points</p>
+        <article class="strong-points__sp-group">
           <img
-            src="img/keghan-crossland-ZZxmc66SjfM-unsplash 1.jpg"
+            class="strong-points__img"
+            src="img/Mackbook.jpg"
+            alt="Foto laptop"
+          />
+          <img
+            class="strong-points__img"
+            src="img/avery-klein.jpg"
+            alt="Foto avery-klein"
+          />
+          <div class="strengths-list">
+            <h3 class="strengths-list__heading">Strengths</h3>
+            <ul class="strong-points__list-events">
+              <li><a class="strong-points__link" href="#">Interiors</a></li>
+              <li><a class="strong-points__link" href="#">Outdoors</a></li>
+              <li><a class="strong-points__link" href="#">Portraits</a></li>
+              <li><a class="strong-points__link" href="#">Styling</a></li>
+              <li><a class="strong-points__link" href="#">Events</a></li>
+              <li>
+                <a class="strong-points__link" href="#">Architecture</a>
+              </li>
+              <li><a class="strong-points__link" href="#">Design</a></li>
+              <li>
+                <a class="strong-points__link" href="#">Celebrations</a>
+              </li>
+              <li><a class="strong-points__link" href="#">Fashion</a></li>
+              <li><a class="strong-points__link" href="#">Nature</a></li>
+            </ul>
+          </div>
+          <img
+            class="strong-points__img"
+            src="img/keghan-crosslan big-unsplash 1 2.jpg"
             alt="Foto keghan"
+          />
+          <img
+            class="strong-points__img"
+            src="img/avery-klein.jpg"
+            alt="Foto avery-klein"
           />
         </article>
       </section>
+
+      <!-- ---------навигационное мобильное меню----------------- -->
+      <nav class="navigation-mini">
+        <hr />
+        <ul class="navigation-mini__menu-mobile">
+          <li><a class="navigation-mini__link" href="#biography">B</a></li>
+          <li><a class="navigation-mini__link" href="#designers">D</a></li>
+          <li><a class="navigation-mini__link" href="#testimonials">T</a></li>
+          <li>
+            <a class="navigation-mini__link" href="#strong-points">S</a>
+          </li>
+        </ul>
+        <hr />
+      </nav>
+
+      <!-- ------------------------------------------------------------- -->
     </main>
-    <footer class="bottom-panel">
-      <address>
-        <a href="+7 921 123-45-67">+7 921 123-45-67</a><br />
-        <a href="info@modstudio.com">INFO@MODSTUDIO.COM</a>
+
+    <footer class="footer-panel">
+      <address class="footer-panel__data">
+        <a class="footer-panel__link" href="+7 921 123-45-67"
+          >+7 921 123-45-67</a
+        ><br />
+        <a class="footer-panel__link" href="info@modstudio.com"
+          >INFO@MODSTUDIO.COM</a
+        >
       </address>
-      <p>A product of <span>MOD</span></p>
-      <p class="copyright">© 2023 Mod Media. All rights reserved</p>
+
+      <p class="footer-panel__title">
+        A product of <span class="footer-panel__text">MOD</span>
+      </p>
+
+      <p class="footer-panel__copyright">
+        © 2023 Mod Media. All rights reserved
+      </p>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/78db22cb34.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
