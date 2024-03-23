@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Otus</title>
-    <link rel="stylesheet" href="style.scss" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/css/all.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,29 +16,62 @@
   <body>
     <!-- ------------модальное окно---------------- -->
 
-    <button id="openModal">Открыть модальное окно</button>
+    <div class="wrap-modal">
+      <button class="btn btn--open" id="openModal">
+        <i class="fa-solid fa-message" alt="log"></i>
+      </button>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <h2 class="modal__title">Get in touch</h2>
+          <p class="modal__question">
+            Do you have any questions? Have something to say? Don't be shy,
+            write to us:
+          </p>
+          <form id="form" method="dialog">
+            <label class="modal__label" for="name"
+              >Name
 
-    <div class="modal" id="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 class="modal__title">Get in touch</h2>
-        <p class="modal__question">
-          Do you have any questions? Have something to say? Don't be shy, write
-          to us:
-        </p>
-
-        <form id="form">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <button class="btn" type="reset">Cancel</button>
-          <button class="btn" type="submit">+ Send</button>
-        </form>
+              <input
+                class="modal__input modal__input--name"
+                type="text"
+                id="name"
+                name="name"
+                minlength="3"
+                placeholder="Name"
+                required
+              />
+            </label>
+            <label class="modal__label" for="email"
+              >Email:
+              <input
+                class="modal__input modal__input--email"
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="name@email.com"
+              />
+            </label>
+            <label class="modal__label modal__label--text" for="Comment"
+              >Comment<input
+                class="modal__input modal__input--text"
+                type="text"
+                placeholder="Some text..."
+            /></label>
+          </form>
+          <div class="modal__btn">
+            <button class="btn btn--color-grey" id="closeModal" type="button">
+              Cancel
+            </button>
+            <button class="btn btn--color-black" id="submitModal" type="submit">
+              + Send
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- ------------------------------------------------- -->
-    <!-- шапка с навигационной панелью -->
+    <!----------------------------------------------------->
+    <!--- шапка с навигационной панелью --->
 
     <header class="header">
       <h1 class="header__logo">Mod</h1>
@@ -51,7 +83,7 @@
             <a href="#testimonials">Testimonials</a>
           </li>
           <li class="menu__list-item">
-            <a href="#strong-points">Strqong points</a>
+            <a href="#strong-points">Strong points</a>
           </li>
         </ul>
       </nav>
@@ -86,7 +118,7 @@
             />
           </picture>
         </div>
-        <div class="head-title head-title_transform"><p>Biography</p></div>
+        <div class="biography__head-title"><p>Biography</p></div>
 
         <div class="right-card">
           <div class="right-card__author">
@@ -308,9 +340,13 @@
               <li><a class="strong-points__link" href="#">Portraits</a></li>
               <li><a class="strong-points__link" href="#">Styling</a></li>
               <li><a class="strong-points__link" href="#">Events</a></li>
-              <li><a class="strong-points__link" href="#">Architecture</a></li>
+              <li>
+                <a class="strong-points__link" href="#">Architecture</a>
+              </li>
               <li><a class="strong-points__link" href="#">Design</a></li>
-              <li><a class="strong-points__link" href="#">Celebrations</a></li>
+              <li>
+                <a class="strong-points__link" href="#">Celebrations</a>
+              </li>
               <li><a class="strong-points__link" href="#">Fashion</a></li>
               <li><a class="strong-points__link" href="#">Nature</a></li>
             </ul>
@@ -335,7 +371,9 @@
           <li><a class="navigation-mini__link" href="#biography">B</a></li>
           <li><a class="navigation-mini__link" href="#designers">D</a></li>
           <li><a class="navigation-mini__link" href="#testimonials">T</a></li>
-          <li><a class="navigation-mini__link" href="#strong-points">S</a></li>
+          <li>
+            <a class="navigation-mini__link" href="#strong-points">S</a>
+          </li>
         </ul>
         <hr />
       </nav>
@@ -361,6 +399,10 @@
         © 2023 Mod Media. All rights reserved
       </p>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/78db22cb34.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
