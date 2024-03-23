@@ -13,14 +13,14 @@
   text-align: center;
 }
 .btn--open {
-  position: absolute;
+  position: fixed;
   right: 0;
   width: 60px;
 }
-.btn--btnClose {
+.btn--color-grey {
   border: 1.32px solid #566789;
 }
-.btn--btnSub {
+.btn--color-black {
   background-color: #000000;
   color: #ffffff;
 }
@@ -304,14 +304,14 @@
      object-fit: contain;
 }
 
-.head-title {
+.biography__head-title {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   line-height: 28.13px;
 }
 
-.head-title--transform {
+.biography__head-title {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
           writing-mode: vertical-lr;
@@ -323,7 +323,7 @@
 }
 
 @media (max-width: 750px) {
-  .head-title--transform {
+  .biography__head-title {
     -webkit-writing-mode: inherit;
         -ms-writing-mode: inherit;
             writing-mode: inherit;

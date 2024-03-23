@@ -6,17 +6,19 @@
   height: 55px;
   border-radius: 8px;
   border: 1.32px solid $secondary-color;
+
   @include main-font($ff, $fw, $fs, $lh, $fc);
   text-align: center;
+
   &--open {
-    position: absolute;
+    position: fixed;
     right: 0;
     width: 60px;
   }
-  &--btnClose {
+  &--color-grey {
     border: 1.32px solid #566789;
   }
-  &--btnSub {
+  &--color-black {
     background-color: $secondary-color;
     color: #ffffff;
   }
@@ -242,20 +244,20 @@
   height: 100%;
   object-fit: contain;
 }
-.head-title {
+.biography__head-title {
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   line-height: 28.13px;
 }
-.head-title--transform {
+.biography__head-title {
   writing-mode: vertical-lr;
   transform: rotate(-180deg);
   align-self: flex-start;
   margin-top: 3px;
 }
 @media (max-width: 750px) {
-  .head-title--transform {
+  .biography__head-title {
     writing-mode: inherit;
     transform: rotate(0deg);
     align-self: flex-end;
