@@ -68,6 +68,18 @@
   background-color: #ffffff;
   padding: 20px;
 }
+.modal-border {
+  position: absolute;
+  top: 100px;
+  right: 480px;
+  width: 480px;
+  height: 588px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  z-index: 100;
+}
 .modal__label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,19 +127,19 @@
   height: 162px;
 }
 .modal__input--name {
-  background-image: url(/logo/logo_hum.svg);
+  background-image: url(/logo/hum.svg);
   background-repeat: no-repeat;
   background-position: 400px 5px;
 }
 .modal__input--email {
-  background-image: url(/logo/ph_at.svg);
+  background-image: url(/logo/mail.svg);
   background-repeat: no-repeat;
   background-position: 400px 5px;
 }
 .modal__input--text {
   height: 135px;
   padding-bottom: 100px;
-  background-image: url(/logo/logo_SmS.svg);
+  background-image: url(/logo/sms.svg);
   background-repeat: no-repeat;
   background-position: 400px 5px;
 }
