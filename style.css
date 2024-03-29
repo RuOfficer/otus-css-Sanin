@@ -24,9 +24,10 @@
   background-color: rgb(143, 143, 143);
 }
 .btn--open {
-  position: fixed;
+  position: sticky;
   right: 0;
   width: 60px;
+  top: 30px;
 }
 .btn--color-grey {
   border: 1.32px solid #566789;
@@ -41,6 +42,10 @@
     display: none;
   }
 }
+.modal-open {
+  overflow: hidden;
+}
+
 .modal {
   z-index: 500;
   position: fixed;
@@ -48,6 +53,8 @@
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  overflow: hidden;
 }
 .modal-content {
   width: 480px;
@@ -78,7 +85,7 @@
   border-radius: 10px;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
-  z-index: 100;
+  z-index: -1;
 }
 .modal__label {
   display: -webkit-box;
@@ -194,6 +201,7 @@
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+  padding-left: 350px;
 }
 .menu__list {
   margin-right: 20px;
