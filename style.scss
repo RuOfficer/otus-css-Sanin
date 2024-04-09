@@ -247,7 +247,6 @@
 }
 @media (max-width: 750px) {
   .hero-section {
-    margin-bottom: 225px;
     height: 764px;
     align-items: flex-start;
     background-image: url(mobile/inside-weather-mobile.jpg);
@@ -278,7 +277,7 @@
     height: 952px;
     flex-direction: column-reverse;
     gap: 0;
-    margin-bottom: -70px;
+    margin-bottom: 10px;
   }
 }
 .left-card {
@@ -315,17 +314,16 @@
     transform: rotate(0deg);
     align-self: flex-end;
     position: relative;
-    bottom: 380px;
+    bottom: 660px;
     right: 25px;
   }
 }
 
 .right-card {
   width: 38%;
-  height: 230px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+
   gap: 50px;
   padding-left: 30px;
   &__author {
@@ -412,7 +410,7 @@
     line-height: 31.2px;
   }
   &__text br {
-    display: initial;
+    display: none;
   }
 }
 @media (max-width: 750px) {
@@ -421,6 +419,9 @@
     height: 226px;
     align-self: center;
     padding-top: 22px;
+    &__text br {
+      display: initial;
+    }
   }
 }
 @media (max-width: 750px) and (min-width: 432px) {
