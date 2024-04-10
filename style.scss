@@ -249,7 +249,7 @@
   .hero-section {
     height: 764px;
     align-items: flex-start;
-    background-image: url(mobile/inside-weather-mobile.jpg);
+    background-image: url(img/inside-weather-mobile.jpg);
 
     .hero-section__studio {
       width: 100%;
@@ -277,7 +277,6 @@
     height: 952px;
     flex-direction: column-reverse;
     gap: 0;
-    margin-bottom: 10px;
   }
 }
 .left-card {
@@ -291,6 +290,7 @@
     margin: 0;
   }
 }
+
 .pic-img-laptop {
   width: 100%;
   height: 100%;
@@ -323,7 +323,6 @@
   width: 38%;
   display: flex;
   flex-direction: column;
-
   gap: 50px;
   padding-left: 30px;
   &__author {

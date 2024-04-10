@@ -302,7 +302,7 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    background-image: url(mobile/inside-weather-mobile.jpg);
+    background-image: url(img/inside-weather-mobile.jpg);
   }
   .hero-section .hero-section__studio {
     width: 100%;
@@ -338,7 +338,6 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     gap: 0;
-    margin-bottom: 10px;
   }
 }
 .left-card {
