@@ -25,6 +25,7 @@
     right: 0;
     width: 60px;
     top: 30px;
+    overflow: hidden;
   }
   &--color-grey {
     border: 1.32px solid $active-color;
@@ -43,9 +44,9 @@
     display: none;
   }
 }
-.modal-open {
-  overflow: hidden;
-}
+// .modal-open {
+//   overflow: hidden;
+// }
 .modal {
   z-index: 500;
   position: fixed;
