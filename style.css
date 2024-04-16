@@ -28,7 +28,6 @@
   right: 0;
   width: 60px;
   top: 30px;
-  overflow: hidden;
 }
 .btn--color-grey {
   border: 1.32px solid #566789;
@@ -54,7 +53,6 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
-  overflow: hidden;
 }
 .modal-content {
   width: 480px;
@@ -76,16 +74,14 @@
   padding: 20px;
 }
 .modal-border {
-  position: absolute;
-  top: 100px;
-  right: 480px;
   width: 480px;
   height: 588px;
   border: 2px solid #ffffff;
   border-radius: 10px;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
-  z-index: -1;
+  margin: auto;
+  margin-top: -585px;
 }
 .modal__label {
   display: -webkit-box;
@@ -517,6 +513,15 @@
     display: initial;
   }
 }
+.quote::before {
+  content: " ";
+  background-image: url(img/Rectangle\ 5.jpg);
+  width: 20px;
+  height: 8px;
+  position: absolute;
+  margin-top: -10px;
+}
+
 @media (max-width: 750px) and (min-width: 432px) {
   .quote__rectangle {
     position: relative;
